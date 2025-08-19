@@ -1,54 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProMed - Medicine Information</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
-    <!-- <script src="{{ url_for('static', filename='js/home.js') }}" defer></script> -->
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
-                <li><a href="{{ url_for('add_medicine') }}">Add Medicine</a></li>
-                <li><a href="{{ url_for('about_us') }}">About Us</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends 'base.html' %}
+{% block title %}Home - ProMed{% endblock %}
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to proMEd</h1>
-                <p>Your one-stop solution for managing medicine information and expiry alerts.</p>
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to ProMed</h1>
+            <p>Your one-stop solution for managing medicine information and expiry alerts.</p>
+            {% if 'user_id' in session %}
                 <a href="{{ url_for('add_medicine') }}" class="cta-button">Add New Medicine</a>
-            </div>
-        </section>
+            {% else %}
+                <a href="{{ url_for('signup') }}" class="cta-button">Get Started Now</a>
+            {% endif %}
+        </div>
+    </section>
 
-        <section class="features">
-            <h2>What We Offer</h2>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <h3>Manage Medicines</h3>
-                    <p>Easily add, view, and update your medicines in one place.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Expiry Alerts</h3>
-                    <p>Get timely notifications for medicines that are about to expire.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>QR Codes</h3>
-                    <p>Each medicine gets its own unique QR code for easy access to details.</p>
-                </div>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>What We Offer</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3>Manage Medicines</h3>
+                <p>Easily add, view, and update your medicines in one place.</p>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 ProMed. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            <div class="feature-card">
+                <h3>Expiry Alerts</h3>
+                <p>Get timely notifications for medicines that are about to expire.</p>
+            </div>
+            <div class="feature-card">
+                <h3>QR Codes</h3>
+                <p>Each medicine gets its own unique QR code for easy access to details.</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

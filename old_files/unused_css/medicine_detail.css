@@ -1,0 +1,177 @@
+/* === FINAL & CORRECTED STYLESHEET (ALIGNMENT FIXED) === */
+
+/* General Styles - DIRECTLY FROM home.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #2a2a2a;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation Bar - DIRECTLY FROM home.css */
+
+
+header nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff5733;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ff7043;
+}
+
+.nav-button {
+    background-color: #ff7043;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ff5733;
+}
+
+/* Main Content Area */
+main.container {
+    padding: 50px 0;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.medicine-list {
+    list-style: none;
+    display: grid;
+    gap: 30px;
+}
+
+.medicine-item {
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.medicine-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(255, 112, 67, 0.2);
+}
+
+.medicine-info {
+    flex: 1;
+}
+
+.medicine-info h2 {
+    font-size: 1.7rem;
+    color: #ff7043;
+    margin-bottom: 15px;
+}
+
+.medicine-info p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+.medicine-info p strong {
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+
+/* --- FIX IS HERE --- */
+.qr-section {
+    min-width: 200px;
+    /* This creates the vertical alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* --- END OF FIX --- */
+
+.qr-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.qr-code-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff7043;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff5733;
+    transform: scale(1.05);
+}

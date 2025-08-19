@@ -1,0 +1,164 @@
+/* === STYLESHEET BUILT FROM YOUR home.css === */
+
+/* General Styles - DIRECTLY FROM home.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation Bar - DIRECTLY FROM home.css */
+header {
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #2a2a2a;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ff7043;
+}
+
+.nav-button {
+    background-color: #ff7043;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ff5733;
+}
+
+/* Main Content Area - ADAPTED FOR THIS PAGE */
+main.container {
+    padding: 50px 0;
+}
+
+.about-section {
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 15px;
+    padding: 40px 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #bbb;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    color: #ff7043;
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0 auto 30px auto;
+    max-width: 550px;
+    text-align: left;
+}
+
+.about-section ul li {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Custom list bullet styled with your theme color */
+.about-section ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ff7043;
+    font-weight: bold;
+}
+
+/* CTA Button - Style based on your .cta-button */
+.cta-button {
+    display: inline-block;
+    background-color: #ff7043;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff5733;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #777;
+    font-size: 0.9rem;
+}
